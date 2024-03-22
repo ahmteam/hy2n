@@ -1,0 +1,30 @@
+server: 188.121.123.65:20750
+auth: iSegaro2025
+transport:
+  type: udp
+  udp:
+    hopInterval: 30s
+obfs:
+  type: salamander
+  salamander:
+    password: iSegaro2024
+tls:
+  sni: google.com 
+  insecure: true 
+bandwidth: 
+  up: 20 mbps
+  down: 100 mbps
+quic:
+  initStreamReceiveWindow: 8388608 
+  maxStreamReceiveWindow: 8388608 
+  initConnReceiveWindow: 20971520 
+  maxConnReceiveWindow: 20971520 
+  maxIdleTimeout: 30s 
+  keepAlivePeriod: 10s 
+  disablePathMTUDiscovery: false
+fastOpen: true
+lazy: true
+socks5:
+  listen: 127.0.0.1:10808
+http:
+  listen: 127.0.0.1:10809
